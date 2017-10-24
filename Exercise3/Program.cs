@@ -44,6 +44,12 @@ namespace Exercise3
             string input;
             int age = 0;
             bool correctAge = true;
+            string FName;
+            string LName;
+            string height;
+            string weight;
+            double Height;
+            double Weight;
 
             do
             {
@@ -60,13 +66,20 @@ namespace Exercise3
             if ( age >= 0)
             {
                 Console.Write("What is your first name? ");
-                input = Console.ReadLine();
+                FName = Console.ReadLine();
                 Console.Write("What is your last name? ");
-                input = Console.ReadLine();
+                LName = Console.ReadLine();
                 Console.Write("How long are you?: ");
-                input = Console.ReadLine();
+                height = Console.ReadLine();
+                double.TryParse(height, out Height);
                 Console.Write("How much you weight? ");
-                input = Console.ReadLine();
+                weight = Console.ReadLine();
+                double.TryParse(weight, out Weight);
+                Console.WriteLine("Hello" + FName + " " +
+                    LName + " " + " You'r: " + age +
+                    " and " + Height + " m " + " and " 
+                    + Weight +" kg ");
+                Console.ReadLine();
             }
             else if (age < 0)
             {

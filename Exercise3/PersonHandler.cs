@@ -23,7 +23,7 @@ namespace Exercise3
             hello.LName = lname;
             hello.Weight = weight;
             hello.Height = height;
-            return hello;
+            return hello; 
         }
     }
 }
