@@ -8,30 +8,31 @@ namespace Exercise3
 {
     class Person
     {
-        public class person
-        {
-            private int Age;
-            private string fName;
-            private string lName;
-            private double height;
-            private double weight;
-                 
-        }
+        //private field inside the class Person.
+        private int age;
+        private string fName;
+        private string lName;
+        private double height;
+        private double weight;
 
+
+        //public properties with get and set that fetch each variable.
+        //we use void with function that doesn't return anything.
         public int Age
         {
             get
             {
-                return Age;
+                return age;
             }
             set
             {
-                Age = value;
+                age = value;
             }
         }
+        //public properties with get and set that fetch each variable.
+        //we use void with function that doesn't return anything.
 
-
-        public string fName
+        public string FName
         {
             get
             {
@@ -42,9 +43,10 @@ namespace Exercise3
                 fName = value;
             }
         }
+        //public properties with get and set that fetch each variable.
+        //we use void with function that doesn't return anything.
 
-
-        public string lName
+        public string LName
         {
             get
             {
@@ -55,8 +57,10 @@ namespace Exercise3
                 lName = value;
             }
         }
+        //public properties with get and set that fetch each variable.
+        //we use void with function that doesn't return anything.
 
-        public double height
+        public double Height
         {
             get
             {
@@ -67,9 +71,10 @@ namespace Exercise3
                 height = value;
             }
         }
+        //public properties with get and set that fetch each variable.
+        //we use void with function that doesn't return anything.
 
-
-        public double weight
+        public double Weight
         {
             get
             {
@@ -80,8 +85,5 @@ namespace Exercise3
                 weight = value;
             }
         }
-
-
-       
     }
 }
