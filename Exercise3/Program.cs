@@ -18,33 +18,39 @@ namespace Exercise3
             while (KeepGoing)
             {
                 Console.Clear();
-                Console.WriteLine("Welcome User you're at the Right Place" +
-                    "Please Have a moment And Answer Our Questions. ");
-                Console.WriteLine("1) Go ahead... ");
-                Console.WriteLine("2) Exit Program... ");
+                Console.WriteLine("Welcom to Details!");
+                Console.WriteLine("1)Enter Details ");
+                Console.WriteLine("2) Exit.....Bye! ");
                 string input = Console.ReadLine();
-                switch(input)
+
+                switch (input)
                 {
+
                     case "1":
                         PersonInformation();
                         break;
-                    case "0":
+                    case "2":
                         KeepGoing = false;
                         break;
                     default:
-                        Console.WriteLine("Incorect input \n Try Again");
-                        Console.ReadKey();
+                        Console.WriteLine("Bye....");
+                        Console.ReadLine();
                         break;
-                    
+
                 }
             }
         }
         public static void PersonInformation()
         {
             string input;
+            string fName;
+            string lName;
+            double height;
+            double weight;
             int age = 0;
             bool correctAge = true;
-
+            string heightt;
+            string weightt;
             do
             {
                 if (!correctAge)
@@ -52,31 +58,37 @@ namespace Exercise3
                     Console.WriteLine("Please Try Again \n");
                 }
                 Console.Clear();
-                Console.Write("How old are you?: ");
+                Console.Write("Welcome! ");
                 input = Console.ReadLine();
                 correctAge = int.TryParse(input, out age);
             }
-            while (!correctAge);
-            if ( age >= 0)
+            while (correctAge);
+            if (age >= 0)
             {
+                Console.WriteLine("what is your age:");
+                age = int.Parse(Console.ReadLine());
                 Console.Write("What is your first name? ");
-                input = Console.ReadLine();
+                fName = Console.ReadLine();
                 Console.Write("What is your last name? ");
-                input = Console.ReadLine();
-                Console.Write("How long are you?: ");
-                input = Console.ReadLine();
-                Console.Write("How much you weight? ");
-                input = Console.ReadLine();
+                lName = Console.ReadLine();
+                Console.Write("What's your height?: ");
+                heightt = Console.ReadLine();
+                double.TryParse(heightt, out height);
+                Console.Write("What's your weight? ");
+                weightt = Console.ReadLine();
+                double.TryParse(weightt, out weight);
+
+
+                Console.WriteLine("Hello " + fName + " " + lName + " " + " yrou are: " + age + " years old " + " with " + height + " and " + weightt + " weight");
+                Console.ReadLine();
             }
+
             else if (age < 0)
             {
                 Console.WriteLine("Please try Again\n and Inseart a valid age... ");
                 Console.ReadLine();
             }
+
         }
-
-
-        
     }
 }
-
